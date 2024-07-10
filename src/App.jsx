@@ -1,6 +1,6 @@
 
 
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Dashboard from './pages/dashboard'
 import LogIn from './pages/auth/logIn'
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      
+      <RouterProvider router={router}/>
     </>
   )
 }
