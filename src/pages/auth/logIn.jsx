@@ -1,11 +1,22 @@
 import { Link } from "react-router-dom"
 import { useForm } from "react-hook-form"
+import { apiLogin } from "../../services/auth";
 
 const LogIn = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log(data);
+    try {
+      const res = await apiLogin({
+        email:data.email,
+        password:data.password,
+      });
+      console.log("First",res);
+      
+    } catch (error) {
+      console.log(error);
+    }
   }
   return (
 
