@@ -1,13 +1,14 @@
 
 const services = () => {
   return (
-    <div className="bg-[#555555] justify-center items-center pt-10 px-10 ">
+    <div className="bg-[#555555] justify-center items-center pt-10 px-10 " id="services">
       <div className="flex justify-center items-center text-[40px] text-[#FFFFFF]">
         <h1>My Services</h1>
       </div>
       <div className="flex justify-center items-center text-[40px] text-[#FFFFFF]">
         <h1>I'm Available For Hire</h1>
       </div>
+
 
       <div className="flex flex-row  gap-2">
 
