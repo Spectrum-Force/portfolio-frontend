@@ -3,12 +3,12 @@ import { TypeAnimation } from 'react-type-animation';
 import PortfolioButton from './PortfolioButton';
 const Home = () => {
     return ( 
-        <div className='pt-40 bg-[#555555] text-[#FFFFFF] ml-10' id='home'>
+        <div className='pt-40 bg-[#555555] text-[#FFFFFF] ml-10' id='home  md:px-16'>
             <div>
                 <h1>Introduction</h1>
             </div>
 
-            <div className='text-[#FFFFFF] text-[40px] pt-8' >
+            <div className='text-[#FFFFFF] text-[40px] pt-8 md:text-6xl ' >
                 <h4>My Name is Felix Atoma, an <br />
                     Accra Based <TypeAnimation
                         sequence={[

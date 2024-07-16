@@ -1,7 +1,7 @@
 
 const services = () => {
   return (
-    <div className="bg-[#555555] justify-center items-center pt-10 px-10 " id="services">
+    <div className="bg-[#555555] justify-center items-center pt-10 px-10  mb-8" id="services">
       <div className="flex justify-center items-center text-[40px] text-[#FFFFFF]">
         <h1>My Services</h1>
       </div>
@@ -29,7 +29,7 @@ const services = () => {
           </div>
         </div>
         <div className="flex flex-col items-center h-80 w-72 bg-[#555555] border border-[#999999]
-          rounded-lg transition duration-300 ease-in-out transform
+          rounded-lg transition duration-300 ease-in-out transform d:grid-cols-2
            hover:bg-[#1E88E9] space-y-2 pt-5">
           <div className="p-4">
             <img
