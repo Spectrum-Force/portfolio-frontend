@@ -2,7 +2,7 @@
 
 const experiences = () => {
   return (
-    <section className="bg-[#555555]  pt-40 pl-20">
+    <section className="bg-[#555555]  pt-40 pl-20  " id="experiences">
 
       <div className="text-[40px] text-[#FFFFFF] flex flex-row gap-96 ">
         <div>

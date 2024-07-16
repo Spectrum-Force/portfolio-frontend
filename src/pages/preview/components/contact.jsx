@@ -4,7 +4,7 @@
 
 const contact = () => {
   return (
-    <div className="bg-[#555555]  pt-40 ">
+    <div className="bg-[#555555]  pt-40 " id="contact">
 
 
       <div className="flex justify-center text-[#1E88E9] ">

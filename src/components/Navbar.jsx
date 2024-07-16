@@ -8,25 +8,38 @@ const Navbar = () => {
         <img src="src/assets/images/logo-light (1).png" alt="Logo" className="" />
         <span className="font-bold"></span>
       </div>
-      <ul className="flex space-x-4  gap-8">
-      <li>  
-          <Link to="/" className='hover:text-[#1E88E9] hover:underline'>Home</Link>  
+      <ul className=" flex space-x-4  gap-8 md:px-6 md:py-4 ">
+        <li>  
+          <a href="#home" className='hover:text-[#1E88E9] hover:underline'>
+            Home
+          </a>
         </li>  
-        <li>  
-          <Link to="about" className='hover:text-[#1E88E9] hover:underline'>About</Link>  
+        <li >  
+          <a href="#about" className='hover:text-[#1E88E9] hover:underline'>
+            About
+          </a>
         </li>    
-        <li>  
-          <Link to="#services" className='hover:text-[#1E88E9] hover:underline'>Services</Link>  
+        <li >  
+          <a href="#services" className='hover:text-[#1E88E9] hover:underline'>
+            Services
+          </a>
         </li>    
-        <li>  
-          <Link to="/portfolio" className='hover:text-[#1E88E9] hover:underline'>Porfolio</Link>  
+        <li >  
+          <a href="#portfolio" className='hover:text-[#1E88E9] hover:underline'>
+            Portfolio
+          </a>
         </li>    
-        <li>  
-          <Link to="/experiences" className='hover:text-[#1E88E9] hover:underline'>Experiences</Link>  
+        <li >  
+          <a href="#experiences" className='hover:text-[#1E88E9] hover:underline'>
+            Experiences
+          </a>
         </li>    
-        <li>  
-          <Link to="/contact" className='hover:text-[#1E88E9] hover:underline'>Contact</Link>  
+        <li >  
+          <a href="#contact" className='hover:text-[#1E88E9] hover:underline'>
+            Contact
+          </a>
         </li>    
+        
      
          
          

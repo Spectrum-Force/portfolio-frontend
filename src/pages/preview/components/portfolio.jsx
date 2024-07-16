@@ -2,7 +2,7 @@
 
 const portfolio = () => {
   return (
-    <div className="bg-[#555555]">
+    <div className="bg-[#555555]" id="portfolio">
 
 
       <div className='p-20 grid gap-5 justify-center items-center '>

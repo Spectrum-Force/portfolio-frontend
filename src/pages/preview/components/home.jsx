@@ -3,7 +3,7 @@ import { TypeAnimation } from 'react-type-animation';
 import PortfolioButton from './PortfolioButton';
 const Home = () => {
     return ( 
-        <div className='pt-40 bg-[#555555] text-[#FFFFFF] ml-10'>
+        <div className='pt-40 bg-[#555555] text-[#FFFFFF] ml-10' id='home'>
             <div>
                 <h1>Introduction</h1>
             </div>
