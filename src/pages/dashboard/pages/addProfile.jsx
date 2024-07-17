@@ -19,7 +19,7 @@ const AddProfile = () => {
             type="file"
             id="profilePicture"
             accept="image/*"
-            className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
           />
           <label
             htmlFor="location"
@@ -30,7 +30,7 @@ const AddProfile = () => {
           <input
             type="text"
             id="location"
-            className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
           />
           <label
             htmlFor="maritalStatus"
@@ -41,7 +41,7 @@ const AddProfile = () => {
           <select
             id="maritalStatus"
             name="maritalStatus"
-            className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
           >
             <option value="single">Single</option>
             <option value="married">Married</option>
@@ -56,7 +56,7 @@ const AddProfile = () => {
           <select
             id="sex"
             name="sex"
-            className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
           >
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -73,7 +73,7 @@ const AddProfile = () => {
           <input
             type="text"
             id="bio"
-            className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
           />
           <label
             htmlFor="about"
@@ -84,7 +84,7 @@ const AddProfile = () => {
           <input
             type="text"
             id="about"
-            className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
           />
           <label
             htmlFor="dateOfBirth"
@@ -95,7 +95,7 @@ const AddProfile = () => {
           <input
             type="date"
             id="dateOfBirth"
-            className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
           />
           <label
             htmlFor="contact"
@@ -106,7 +106,7 @@ const AddProfile = () => {
           <input
             type="text"
             id="contact"
-            className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
           />
           <label
             htmlFor="resume"
@@ -118,7 +118,7 @@ const AddProfile = () => {
             type="file"
             id="resume"
             name="resume"
-            className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
             accept=".pdf,.doc,.docx"
           />
         </div>

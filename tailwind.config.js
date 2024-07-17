@@ -6,19 +6,21 @@ export default {
   ],
   theme: {
     extend: {
-
       colors: {
         primary: "#FF5722",
         secondary: "#F7F9F2"
-      }
+      },
+      backgroundImage: {
+
+
+  
+      },
+
+       
+
     },
 
-      backgroundImage: {
-       
-    },
-    
   },
   plugins: [],
 }
 
-}

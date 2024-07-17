@@ -5,9 +5,9 @@ import Sidebar from '../../../components/Sidebar'
 
 const DashboardLayout = () => {
   return (
-    <div className="flex">
+    <div className="flex overflow-hidden">
         <Sidebar/>
-       <div className='bg-secondary w-full'>
+       <div className='bg-secondary w-full '>
        <Outlet/> 
        </div>
     </div>

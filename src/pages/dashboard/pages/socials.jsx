@@ -1,8 +1,13 @@
+import SocialCard from "../../../components/socialCard"
+
+
 
 
 const Socials = () => {
   return (
-    <div>Socials</div>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <SocialCard />
+  </div>
   )
 }
 

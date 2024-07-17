@@ -18,7 +18,7 @@ const AddProject = () => {
         <input
           type="text"
           id="projectName"
-          className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+          className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
         />
         <label
           htmlFor="description"
@@ -29,7 +29,7 @@ const AddProject = () => {
         <input
           type="text"
           id="description"
-          className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+          className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
         />
         <label
           htmlFor="contributors"
@@ -40,7 +40,7 @@ const AddProject = () => {
         <input
           type="text"
           id="contributors"
-          className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+          className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
         />
         <label
           htmlFor="skills"
@@ -51,7 +51,7 @@ const AddProject = () => {
         <input
           type="text"
           id="skills"
-          className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+          className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
         />
       </div>
       <div>
@@ -64,7 +64,7 @@ const AddProject = () => {
         <input
           type="text"
           id="link"
-          className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+          className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
         />
         <label
           htmlFor="nameOfInstituition"
@@ -75,7 +75,7 @@ const AddProject = () => {
         <input
           type="text"
           id="nameOfInstituition"
-          className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+          className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
         />
         <label
           htmlFor="startDate"
@@ -86,7 +86,7 @@ const AddProject = () => {
         <input
           type="text"
           id="startDate"
-          className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+          className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
         />
         <label
           htmlFor="endDate"
@@ -97,7 +97,7 @@ const AddProject = () => {
         <input
           type="text"
           id="endDate"
-          className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+          className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
         />
        
       </div>
