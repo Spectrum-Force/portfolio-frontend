@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    extend: {gridAutoRows: {
+      '2fr': 'minmax(0, 2fr)',
+    }},
     extend: {
       colors: {
         primary: "#FF5722",
