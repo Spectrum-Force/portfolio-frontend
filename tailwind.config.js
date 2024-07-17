@@ -8,6 +8,21 @@ export default {
     extend: {gridAutoRows: {
       '2fr': 'minmax(0, 2fr)',
     }},
+    extend: {
+      colors: {
+        primary: "#FF5722",
+        secondary: "#F7F9F2"
+      },
+      backgroundImage: {
+
+
+  
+      },
+
+       
+
+    },
+
   },
   plugins: [],
 }
