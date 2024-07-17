@@ -14,7 +14,7 @@ const services = () => {
 
         <div className="flex flex-col items-center h-80 w-72 bg-[#555555] border border-[#999999]
           rounded-lg transition duration-300 ease-in-out transform
-           hover:bg-[#1E88E9] space-y-2 pt-5">
+           hover:bg-[#337eff] space-y-2 pt-5">
           <div className="p-4">
             <img
               className="w-10 "
@@ -30,7 +30,7 @@ const services = () => {
         </div>
         <div className="flex flex-col items-center h-80 w-72 bg-[#555555] border border-[#999999]
           rounded-lg transition duration-300 ease-in-out transform d:grid-cols-2
-           hover:bg-[#1E88E9] space-y-2 pt-5">
+           hover:bg-[#337eff] space-y-2 pt-5">
           <div className="p-4">
             <img
               className="w-10"
@@ -45,7 +45,7 @@ const services = () => {
         </div>
         <div className="flex flex-col items-center h-80 w-72 bg-[#555555] border border-[#999999]
           rounded-lg transition duration-300 ease-in-out transform
-           hover:bg-[#1E88E9] space-y-2 pt-5">
+           hover:bg-[#337eff] space-y-2 pt-5">
           <div className="p-4">
             <img
               className="w-10"
@@ -59,7 +59,7 @@ const services = () => {
         </div>
         <div className="flex flex-col items-center h-80 w-72 bg-[#555555] border border-[#999999]
           rounded-lg transition duration-300 ease-in-out transform
-           hover:bg-[#1E88E9] space-y-2 pt-5">
+           hover:bg-[#337eff] space-y-2 pt-5">
           <div className="p-4">
             <img
               className="w-10"

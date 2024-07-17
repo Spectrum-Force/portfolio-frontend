@@ -4,7 +4,7 @@ const testimonials = () => {
   return (
     <div className=' bg-[#555555] pt-40'>
       <div className='flex  flex-col justify-center items-center'>
-        <div className=' text-[#1E88E9]'>
+        <div className=' text-[#337eff]'>
           <h4>Testimonials</h4>
         </div>
 
@@ -30,7 +30,7 @@ const testimonials = () => {
             />
           </div>
           <div className="flex flex-col justify-center items-center space-y-4 px-6">
-            <h3 className="text-lg font-bold  text-[#1E88E9]">Thomas, Samsung</h3>
+            <h3 className="text-lg font-bold  text-[#337eff]">Thomas, Samsung</h3>
             <p className="text-sm text-[#FFFFFF]">Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Ut pariatur aperiam suscipit possimus.</p>
           </div>
@@ -45,7 +45,7 @@ const testimonials = () => {
               alt="" />
           </div>
           <div className="flex flex-col justify-center items-center space-y-4 px-6">
-            <h3 className="text-lg font-bold text-[#1E88E9]">Sarah, Microsoft</h3>
+            <h3 className="text-lg font-bold text-[#337eff]">Sarah, Microsoft</h3>
             <p className="text-sm text-[#FFFFFF]">Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Ut pariatur aperiam suscipit possimus.</p>
           </div>
@@ -59,7 +59,7 @@ const testimonials = () => {
               src="src/assets/images/3.jpg" alt="" />
           </div>
           <div className="flex flex-col justify-center items-center space-y-4 px-6">
-            <h3 className="text-lg font-bold text-[#1E88E9]">Micheal, Apple</h3>
+            <h3 className="text-lg font-bold text-[#337eff]">Micheal, Apple</h3>
             <p className="text-sm text-[#FFFFFF]">Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Ut pariatur aperiam suscipit possimus.</p>
           </div>

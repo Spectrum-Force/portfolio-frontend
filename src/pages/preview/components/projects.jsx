@@ -4,7 +4,7 @@ const projects = () => {
     return (
         <div className='pt-40 bg-[#555555]'>
 
-            <div className='bg-[#1E88E9] text-[#FFFFFF] flex flex-row justify-center 
+            <div className='bg-[#337eff] text-[#FFFFFF] flex flex-row justify-center 
             items-center h-60 gap-40 '>
 
 

@@ -38,32 +38,32 @@ const Navbar = () => {
       </div>
       <ul className=" flex space-x-4  gap-8 md:px-6 md:py-4 ">
         <li>  
-          <a href="#home" className='hover:text-[#1E88E9] hover:underline'>
+          <a href="#home" className='hover:text-[#337eff] hover:underline'>
             Home
           </a>
         </li>  
         <li >  
-          <a href="#about" className='hover:text-[#1E88E9] hover:underline'>
+          <a href="#about" className='hover:text-[#337eff] hover:underline'>
             About
           </a>
         </li>    
         <li >  
-          <a href="#services" className='hover:text-[#1E88E9] hover:underline'>
+          <a href="#services" className='hover:text-[#337eff] hover:underline'>
             Services
           </a>
         </li>    
         <li >  
-          <a href="#portfolio" className='hover:text-[#1E88E9] hover:underline'>
+          <a href="#portfolio" className='hover:text-[#337eff]hover:underline'>
             Portfolio
           </a>
         </li>    
         <li >  
-          <a href="#experiences" className='hover:text-[#1E88E9] hover:underline'>
+          <a href="#experiences" className='hover:text-[#337eff] hover:underline'>
             Experiences
           </a>
         </li>    
         <li >  
-          <a href="#contact" className='hover:text-[#1E88E9] hover:underline'>
+          <a href="#contact" className='hover:text-[#337eff] hover:underline'>
             Contact
           </a>
         </li>    
