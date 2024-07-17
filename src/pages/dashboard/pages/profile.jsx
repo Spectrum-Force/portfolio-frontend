@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import PagesLayout from "../layouts/pagesLayout"
 import { back, woman } from "../../../assets"
+import { Pencil } from "lucide-react"
 
 
 const Profile = () => {
@@ -9,7 +10,10 @@ const Profile = () => {
    <PagesLayout  headerText="Profile" buttonText="Add Profile" onClick={() => navigate ("/dashboard/profile/add")} >
     <div className="relative mt-5">
   <img src={back} alt="background" className="w-screen h-64 object-cover" />
+    <span className="">
+    <Pencil/>
   
+    </span>
   <div className="flex  absolute top-44 left-8  ">
     <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white">
       <img src={woman} alt="profile" className="w-full h-full object-cover" />

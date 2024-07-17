@@ -18,7 +18,7 @@ const AddSkills = () => {
         <input
           type="text"
           id="name"
-          className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+          className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
         />
         
         <label
@@ -30,7 +30,7 @@ const AddSkills = () => {
         <select
           id=""
           name="levelOfProficiency"
-          className="h-8 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+          className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
         >
           <option value="beginner">Beginner</option>
           <option value="intermediate">Intermediate</option>

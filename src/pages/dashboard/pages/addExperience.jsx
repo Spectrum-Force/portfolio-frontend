@@ -17,7 +17,7 @@ const AddExperience = () => {
           <input
             type="text"
             id="companyName"
-            className="h-8 w-64 px-2 py-1 border-black border-2 rounded-lg "
+            className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg "
           />
           <label
             htmlFor="role"
@@ -28,7 +28,7 @@ const AddExperience = () => {
           <input
             type="text"
             id="role"
-            className="h-8 w-64 px-2 py-1 border-black border-2 rounded-lg "
+            className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg "
           />
           <label
             htmlFor="responsibility"
@@ -39,7 +39,7 @@ const AddExperience = () => {
           <input
             type="text"
             id="responsibility"
-            className="h-8 w-64 px-2 py-1 border-black border-2 rounded-lg "
+            className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg "
           />
           <label
             htmlFor="location"
@@ -50,7 +50,7 @@ const AddExperience = () => {
           <input
             type="text"
             id="location"
-            className="h-8 w-64 px-2 py-1 border-black border-2 rounded-lg"
+            className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg"
           />
           <label
             htmlFor="startDate"
@@ -61,7 +61,7 @@ const AddExperience = () => {
           <input
             type="text"
             id="startDate"
-            className="h-8 w-64 px-2 py-1 border-black border-2 rounded-lg"
+            className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg"
           />
           <label
             htmlFor="endDate"
@@ -72,7 +72,7 @@ const AddExperience = () => {
           <input
             type="text"
             id="endDate"
-            className="h-8 w-64 px-2 py-1 border-black border-2 rounded-lg "
+            className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg "
           />
           
         </div>
