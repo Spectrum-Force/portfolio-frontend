@@ -14,7 +14,6 @@ export default {
     },
 
       backgroundImage: {
-       loginBg: "url('./src/assets/images/loginBg.png')"
        
     },
     
