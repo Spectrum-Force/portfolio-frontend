@@ -7,7 +7,7 @@ const contact = () => {
     <div className="bg-[#555555]  pt-40 " id="contact">
 
 
-      <div className="flex justify-center text-[#1E88E9] ">
+      <div className="flex justify-center text-[#337eff] ">
         <h1>Have a question</h1>
       </div>
       <div className="flex justify-center text-[50px] text-[#FFFFFF]">
@@ -66,8 +66,8 @@ const contact = () => {
       </div>
       <div className='mt-8 flex justify-center'>
         <button
-          className='px-8 py-2 border-solid border-2 border-[#1E88E9]  bg-[#1E88E9]
-							text-md text-[#1E88E9] rounded-md hover:bg-[#1E88E9] hover:text-[#FFFFFF] transition-all'
+          className='px-8 py-2 border-solid border-2 border-[#337eff]  bg-[#337eff]
+							text-md text-[#337eff]rounded-md hover:bg-[#337eff] hover:text-[#FFFFFF] transition-all'
           type='submit'>
           Submit form
         </button>

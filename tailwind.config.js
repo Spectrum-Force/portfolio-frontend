@@ -5,7 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {gridAutoRows: {
+      '2fr': 'minmax(0, 2fr)',
+    }},
   },
   plugins: [],
 }

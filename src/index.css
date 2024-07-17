@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (min-width: 1024px) {  
+    .lg\:hidden { display: none; }  
+    .lg\:flex { display: flex; }  
+  }  

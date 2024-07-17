@@ -5,7 +5,7 @@ const projects = () => {
         <div className='pt-40 bg-[#555555]'>
 
             <div className='bg-[#1E88E9] text-[#FFFFFF] flex flex-row justify-center 
-            items-center h-60 gap-40'>
+            items-center h-60 gap-40 '>
 
 
                 <div>

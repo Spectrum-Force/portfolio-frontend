@@ -15,7 +15,8 @@ const testimonials = () => {
       </div>
 
 
-      <div className="flex flex-row  gap-8 justify-center items-center pt-8">
+      <div className="flex flex-row  gap-8 justify-center items-center pt-8 
+      grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
         <div className="flex flex-col items-center h-80 w-72 bg-[#555555]
         border border-[#999999]
@@ -51,7 +52,7 @@ const testimonials = () => {
         </div>
         <div className="flex flex-col items-center h-80 w-72 bg-[#555555]
            rounded-lg transition duration-300 ease-in-out transform
-            space-y-2 pt-5 border border-[#999999]">
+            space-y-2 pt-5 border border-[#999999] ">
           <div className="p-4">
             <img
               className="w-10"

@@ -1,6 +1,7 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
 import PortfolioButton from './PortfolioButton';
+import CvButton from './CvButton';
 const Home = () => {
     return ( 
         <div className='pt-40 bg-[#555555] text-[#FFFFFF] ml-10' id='home  md:px-16'>
@@ -46,10 +47,18 @@ const Home = () => {
             </div>
 
 
-            <div className='pt-6'>
+           <div className='flex flex-row gap-20'>
+
+           <div className='pt-6'>
                 
                 <PortfolioButton />
             </div>
+            <div className='ml-8 pt-4'>
+            <CvButton />
+            </div>
+
+
+           </div>
 
 
 
