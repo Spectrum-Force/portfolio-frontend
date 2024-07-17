@@ -1,12 +1,12 @@
-import { github, linked, twitter } from "../assets"
+import { git,  linked, twitter } from "../assets"
 
 
 const SocialCard = () => {
   return (
-    <div className="mt-20 grid grid-cols-1 gap-4 md:grid-cols-3 max-w-screen-xl mx-auto px-4 ">
+    <div className="mt-20 max-w-sm rounded overflow-hidden shadow-lg bg-white p-4 ">
     <link rel="stylesheet" href="" />
     <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-      <img src={github} alt="git" className="h-10 rounded " />
+      <img src={git} alt="git" className="h-10 rounded " />
     </a>
     <div className="mt-4">
       <h2 className="font-bold text-xl mb-2">GitHub </h2>
@@ -29,7 +29,7 @@ const SocialCard = () => {
       
     </div>
 
-  </div>
+  </div> 
   )
 }
 

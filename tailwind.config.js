@@ -6,20 +6,17 @@ export default {
   ],
   theme: {
     extend: {
-
       colors: {
         primary: "#FF5722",
         secondary: "#F7F9F2"
-      }
+      },
+      backgroundImage: {
+        loginBg: "url('./src/assets/images/loginBg.png')"
+  
+      },
     },
 
-      backgroundImage: {
-       loginBg: "url('./src/assets/images/loginBg.png')"
-       
-    },
-    
   },
   plugins: [],
 }
 
-}
