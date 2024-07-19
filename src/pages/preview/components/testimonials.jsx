@@ -4,9 +4,7 @@ const testimonials = () => {
   return (
     <div className=' bg-[#555555] pt-40'>
       <div className='flex  flex-col justify-center items-center'>
-        <div className=' text-[#337eff]'>
-          <h4>Testimonials</h4>
-        </div>
+        
 
         <div className='text-[#FFFFFF] pt-2 text-[40px]'>
           <h1>What They Say</h1>
@@ -16,7 +14,7 @@ const testimonials = () => {
 
 
       <div className="flex flex-row  gap-8 justify-center items-center pt-8 
-      grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
 
         <div className="flex flex-col items-center h-80 w-72 bg-[#555555]
         border border-[#999999]

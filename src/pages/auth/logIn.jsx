@@ -4,7 +4,7 @@ import { apiLogin } from "../../services/auth";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import Loader from "../../components/loader";
-import backgroundImage from "../../assets/images/signUpBg.png"
+import signing from "../../assets/images/signing.png"
 
 const LogIn = () => {
 
@@ -45,13 +45,13 @@ const LogIn = () => {
   return (
 
     <div className="bg-signUpBg flex items-center justify-center" >
-      <div className="flex flex-row shadow-lg m-48">
+      <div className="flex flex-row shadow-lg m-32 ">
         <div>
-          <form onSubmit={handleSubmit(onSubmit)} className=" flex place-content-center text-xl font-bold">
+          <form onSubmit={handleSubmit(onSubmit)} className=" flex place-content-center text-xl font-serif">
             <div className="mx-28">
               <div className="m-9">
                 <h1>SIGN IN</h1>
-                <p>use your account</p>
+                <p>Use your account</p>
               </div>
 
               <label
@@ -64,7 +64,7 @@ const LogIn = () => {
                 type="text"
                 id="email"
                 placeholder="email/username"
-                className="bg-slate-300 h-10 w-full px-2 py-1 border-black border-2 rounded-lg "
+                className="bg-slate-300 h-10 w-full px-2 py-1 border-gray-400 border-2 rounded-lg "
                 {
                 ...register("email", { required: "email is not provided" })
                 }
@@ -81,41 +81,41 @@ const LogIn = () => {
                 type="password"
                 id="password"
                 placeholder="password"
-                className=" bg-slate-300 h-10 w-full px-2 py-1 border-black border-2 rounded-lg"
+                className=" bg-slate-300 h-10 w-full px-2 py-1 border-gray-400 border-2 rounded-lg"
                 {
                 ...register("password", { required: "provide password" })
                 }
               />
               {errors.password && (<p className="text-red-500">{errors.password.message}</p>)}
               <div className=" flex pl-10">
-              <div className="text-center text-white m-4 pb-8 h-10 w-40 px-3 py-2 bg-[#337eff] border-2 rounded-3xl hover:bg-black">
-                <button type="submit" className=""
+                <div className="text-center text-white my-8 pb-8 h-10 w-40 px-3 py-2 bg-[#337eff] border-2 rounded-3xl hover:bg-black">
+                  <button type="submit">
+                    {isSubmitting ? <Loader /> : "Sign in"}
+                  </button>
+                </div>
+              </div>
 
-                >
-                  {isSubmitting ? <Loader/>: "Sign in"}
-                </button>
-              </div>
-              </div>
-              
             </div>
           </form>
 
         </div>
 
         <div className="bg-[#337eff] place-content-center">
-          <div className="items-center text-white font-extrabold italic text-lg m-20">
+          <div className="text-center text-white font-mono text-lg m-20">
             <h1> Hello, Friend!</h1>
             <p>Enter your personal details <br />to start your journey with us</p>
-            <p>Don't have an account?</p>
             <Link to="/signup" className="underline">
               SIGN UP
             </Link>
           </div>
-
+          
         </div>
+         
+        <div>
+        <img src={signing} alt="signing" className="bottom-right-image "/>
       </div>
-
-
+      </div>
+      
     </div>
   )
 }
