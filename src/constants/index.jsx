@@ -47,7 +47,7 @@ const K = {
         {
             icon: < LogOut/>,
             text: "Logout",
-           
+             link: "/signup"
         },
 
     ],
