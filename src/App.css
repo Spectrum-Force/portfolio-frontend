@@ -1,0 +1,41 @@
+.app-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .app-container .login-page,
+  .app-container .signup-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .app-container .login-page {
+    transform: translateX(0%);
+  }
+  
+  .app-container .signup-page {
+    transform: translateX(100%);
+  }
+  
+  .app-container .login-page.show {
+    transform: translateX(0%);
+  }
+  
+  .app-container .signup-page.show {
+    transform: translateX(0%);
+  }
+  
+  .app-container .login-page.hide {
+    transform: translateX(-100%);
+  }
+  
+  .app-container .signup-page.hide {
+    transform: translateX(100%);
+  }
+  
