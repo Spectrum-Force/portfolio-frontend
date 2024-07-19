@@ -10,7 +10,7 @@ const AddExperience = () => {
           
           <label
             htmlFor="companyName"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4 "
+            className="block  font-bold mb-1 ml-4 "
           >
             Name of Company
           </label>
@@ -21,7 +21,7 @@ const AddExperience = () => {
           />
           <label
             htmlFor="role"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4 "
+            className="block  font-bold mb-1 ml-4 "
           >
            Role
           </label>
@@ -32,7 +32,7 @@ const AddExperience = () => {
           />
           <label
             htmlFor="responsibility"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4 "
+            className="block  font-bold mb-1 ml-4 "
           >
            Responsibility
           </label>
@@ -43,7 +43,7 @@ const AddExperience = () => {
           />
           <label
             htmlFor="location"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block  font-bold mb-1 ml-4"
           >
             Location
           </label>
@@ -54,7 +54,7 @@ const AddExperience = () => {
           />
           <label
             htmlFor="startDate"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block  font-bold mb-1 ml-4"
           >
             Start Date
           </label>
@@ -65,7 +65,7 @@ const AddExperience = () => {
           />
           <label
             htmlFor="endDate"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block  font-bold mb-1 ml-4"
           >
            End Date
           </label>
@@ -77,8 +77,9 @@ const AddExperience = () => {
           
         </div>
 
-        <div>
-          <button type="submit" className=" mt-5 h-10 w-40 px-3 py-2 bg-[#FF9C60] border-2 rounded-3xl hover:bg-[#e7d7e9]"
+        <div className="flex justify-center items-center mt-5">
+          <button
+           type="submit" className=" mt-5 h-10 w-40 px-3 py-2 bg-primary border-2 rounded-3xl hover:bg-[#e7d7e9]"
           >Submit</button>
         </div>
       </form>

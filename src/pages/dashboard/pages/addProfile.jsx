@@ -3,7 +3,7 @@
 const AddProfile = () => {
   return (
     <div className="h-screen">
-      <h1  className="flex justify-center font-bold text-3xl mb-8">Add Profile</h1>
+      <h1  className="flex justify-center font-bold text-3xl mb-8 mt-10">Add Profile</h1>
       <div className="flex justify-center shadow-xl mt-5 w-[600px] m-64">
     <form className="place-content-center m-8">
       <div className="grid grid-cols-2 gap-8">
@@ -11,7 +11,7 @@ const AddProfile = () => {
     
           <label
             htmlFor="profilePicture"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block   mb-1 ml-4"
           >
             Profile Picture
           </label>
@@ -23,7 +23,7 @@ const AddProfile = () => {
           />
           <label
             htmlFor="location"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block   mb-1 ml-4"
           >
             Location
           </label>
@@ -34,7 +34,7 @@ const AddProfile = () => {
           />
           <label
             htmlFor="maritalStatus"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block   mb-1 ml-4"
           >
             Marital Status
           </label>
@@ -49,7 +49,7 @@ const AddProfile = () => {
           </select>
           <label
             htmlFor="sex"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block   mb-1 ml-4"
           >
             Sex
           </label>
@@ -66,7 +66,7 @@ const AddProfile = () => {
         <div>
           <label
             htmlFor="bio"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block   mb-1 ml-4"
           >
             Bio
           </label>
@@ -77,7 +77,7 @@ const AddProfile = () => {
           />
           <label
             htmlFor="about"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block   mb-1 ml-4"
           >
             About
           </label>
@@ -88,7 +88,7 @@ const AddProfile = () => {
           />
           <label
             htmlFor="dateOfBirth"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block   mb-1 ml-4"
           >
             Date of Birth
           </label>
@@ -99,7 +99,7 @@ const AddProfile = () => {
           />
           <label
             htmlFor="contact"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block   mb-1 ml-4"
           >
             Contact
           </label>
@@ -110,7 +110,7 @@ const AddProfile = () => {
           />
           <label
             htmlFor="resume"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block   mb-1 ml-4"
           >
             Resume
           </label>
@@ -126,7 +126,7 @@ const AddProfile = () => {
       <div className="flex justify-center mt-5">
         <button
           type="submit"
-          className="h-10 w-40 px-3 py-2 bg-[#FF9C60] border-2 rounded-3xl hover:bg-[#e7d7e9]"
+          className="h-10 w-40 px-3 py-2 bg-primary border-2 rounded-3xl hover:bg-[#e7d7e9] font-bold"
         >
          Submit
         </button>

@@ -10,7 +10,7 @@ const AddEducation = () => {
           
           <label
             htmlFor="institutionName"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4 "
+            className="block   mb-1 ml-4 "
           >
             Name of Institution
           </label>
@@ -21,7 +21,7 @@ const AddEducation = () => {
           />
           <label
             htmlFor="location"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block   mb-1 ml-4"
           >
             Location
           </label>
@@ -32,7 +32,7 @@ const AddEducation = () => {
           />
           <label
             htmlFor="program"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block   mb-1 ml-4"
           >
             Program
           </label>
@@ -43,7 +43,7 @@ const AddEducation = () => {
           />
           <label
             htmlFor="qualification"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block   mb-1 ml-4"
           >
 
             Qualification
@@ -55,7 +55,7 @@ const AddEducation = () => {
           />
           <label
             htmlFor="startDate"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block   mb-1 ml-4"
           >
             Start Date
           </label>
@@ -66,7 +66,7 @@ const AddEducation = () => {
           />
           <label
             htmlFor="endDate"
-            className="block text-[#FF9C60] font-bold mb-1 ml-4"
+            className="block   mb-1 ml-4"
           >
            End Date
           </label>
@@ -78,8 +78,9 @@ const AddEducation = () => {
           
         </div>
 
-        <div>
-          <button type="submit" className=" mt-5 h-10 w-40 px-3 py-2 bg-[#FF9C60] border-2 rounded-3xl hover:bg-[#e7d7e9]"
+        <div className="flex justify-center items-center mt-5">
+          <button 
+          type="submit" className=" mt-5 h-10 w-40 px-3 py-2 bg-primary border-2 rounded-3xl hover:bg-[#e7d7e9] font-bold"
           >Submit</button>
         </div>
       </form>

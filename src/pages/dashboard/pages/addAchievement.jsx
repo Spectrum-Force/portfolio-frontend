@@ -5,13 +5,13 @@ const AddAchievement = () => {
     <div className="h-screen">
       <h1 className="flex justify-center font-bold text-3xl mb-8">Add Achievement</h1>
       <div className="flex justify-center shadow-xl mt-5 w-[600px] m-64">
-        <form className="place-content-center m-8">
+        <form className="place-content-center m-8 text-black">
           <div className="grid gap-8 ">
 
             <div>
               <label
                 htmlFor="award"
-                className="block text-[#FF9C60] font-bold mb-1 ml-4"
+                className="block   mb-1 ml-4"
               >
                 Award
               </label>
@@ -24,7 +24,7 @@ const AddAchievement = () => {
               />
               <label
                 htmlFor="description"
-                className="block text-[#FF9C60] font-bold mb-1 ml-4"
+                className="block   mb-1 ml-4"
               >
                 Description
               </label>
@@ -35,7 +35,7 @@ const AddAchievement = () => {
               />
                <label
                 htmlFor="nameOfInstitution"
-                className="block text-[#FF9C60] font-bold mb-1 ml-4"
+                className="block  mb-1 ml-4"
               >
                Institution
               </label>
@@ -47,7 +47,7 @@ const AddAchievement = () => {
               />
               <label
                 htmlFor="imageUpload"
-                className="block text-[#FF9C60] font-bold mb-1 ml-4"
+                className="block   mb-1 ml-4"
               >
                 Upload an Image
               </label>
@@ -58,7 +58,7 @@ const AddAchievement = () => {
               />
               <label
                 htmlFor="date"
-                className="block text-[#FF9C60] font-bold mb-1 ml-4"
+                className="block   mb-1 ml-4"
               >
                 Date
               </label>
@@ -74,7 +74,7 @@ const AddAchievement = () => {
           <div className="flex justify-center mt-5">
             <button
               type="submit"
-              className="h-10 w-40 px-3 py-2 bg-[#FF9C60] border-2 rounded-3xl hover:bg-[#e7d7e9]"
+              className="h-10 w-40 px-3 py-2 bg-primary border-2 rounded-3xl hover:bg-[#e7d7e9] font-bold"
             >
              Submit
             </button>

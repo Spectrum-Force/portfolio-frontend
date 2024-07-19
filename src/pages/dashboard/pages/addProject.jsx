@@ -3,7 +3,7 @@ import React from 'react'
 const AddProject = () => {
   return (
     <div className="h-screen">
-    <h1  className="flex justify-center font-bold text-3xl mb-8">Add Project</h1>
+    <h1  className="flex justify-center font-bold text-3xl mb-8 mt-10">Add Project</h1>
     <div className="flex justify-center shadow-xl mt-5 w-[600px] m-64">
   <form className="place-content-center m-8">
     <div className="grid grid-cols-2 gap-8">
@@ -11,7 +11,7 @@ const AddProject = () => {
   
         <label
           htmlFor="projectName"
-          className="block text-[#FF9C60] font-bold mb-1 ml-4"
+          className="block   mb-1 ml-4"
         >
           Project Name
         </label>
@@ -22,7 +22,7 @@ const AddProject = () => {
         />
         <label
           htmlFor="description"
-          className="block text-[#FF9C60] font-bold mb-1 ml-4"
+          className="block   mb-1 ml-4"
         >
          Description
         </label>
@@ -33,7 +33,7 @@ const AddProject = () => {
         />
         <label
           htmlFor="contributors"
-          className="block text-[#FF9C60] font-bold mb-1 ml-4"
+          className="block   mb-1 ml-4"
         >
           Contributors
         </label>
@@ -44,7 +44,7 @@ const AddProject = () => {
         />
         <label
           htmlFor="skills"
-          className="block text-[#FF9C60] font-bold mb-1 ml-4"
+          className="block   mb-1 ml-4"
         >
           Skills
         </label>
@@ -57,7 +57,7 @@ const AddProject = () => {
       <div>
         <label
           htmlFor="link"
-          className="block text-[#FF9C60] font-bold mb-1 ml-4"
+          className="block   mb-1 ml-4"
         >
          Link
         </label>
@@ -68,7 +68,7 @@ const AddProject = () => {
         />
         <label
           htmlFor="nameOfInstituition"
-          className="block text-[#FF9C60] font-bold mb-1 ml-4"
+          className="block   mb-1 ml-4"
         >
           Instituition
         </label>
@@ -79,7 +79,7 @@ const AddProject = () => {
         />
         <label
           htmlFor="startDate"
-          className="block text-[#FF9C60] font-bold mb-1 ml-4"
+          className="block   mb-1 ml-4"
         >
           Start Date
         </label>
@@ -90,7 +90,7 @@ const AddProject = () => {
         />
         <label
           htmlFor="endDate"
-          className="block text-[#FF9C60] font-bold mb-1 ml-4"
+          className="block   mb-1 ml-4"
         >
          End Date
         </label>
@@ -105,7 +105,7 @@ const AddProject = () => {
     <div className="flex justify-center mt-5">
       <button
         type="submit"
-        className="h-10 w-40 px-3 py-2 bg-[#FF9C60] border-2 rounded-3xl hover:bg-[#e7d7e9]"
+        className="h-10 w-40 px-3 py-2 bg-primary border-2 rounded-3xl hover:bg-[#e7d7e9] font-bold"
       >
        Submit
       </button>
