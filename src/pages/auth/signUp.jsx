@@ -6,6 +6,7 @@ import { apiCheckUsernameExists, apiSignUp } from "../../services/auth";
 import { toast } from "react-toastify";
 import { debounce } from "lodash";
 import Loader from "../../components/loader";
+import signing from "../../assets/images/signing.png"
 
 
 const SignUp = () => {
@@ -95,8 +96,7 @@ const SignUp = () => {
         <div className="flex justify-center items-center h-screen bg-[#337eff]">
           <div className="text-center text-white font-mono text-lg m-20">
             <h1 className="font-extrabold text-3xl">
-              Welcome <br />
-              Back!
+              Welcome!
             </h1>
             <p>To keep connected with us please login with your info!</p>
             <Link to="/login" className="underline">Sign In Here</Link>
@@ -106,7 +106,7 @@ const SignUp = () => {
         <div className="">
           <form className="[h-500px] w-[500px] flex flex-row place-content-center font-serif" onSubmit={handleSubmit(onSubmit)}  >
             <div>
-              <div className="text-center  text-3xl p-3">
+              <div className="text-center  text-3xl p-3 pt-10">
                 <h1>Sign Up</h1>
               </div>
               <label
@@ -236,8 +236,11 @@ const SignUp = () => {
           </form>
         </div>
 
-
+        <div>
+        <img src={signing} alt="signing" className="bottom-right-image-two" />
       </div>
+      </div>
+     
     </div>
 
   )
