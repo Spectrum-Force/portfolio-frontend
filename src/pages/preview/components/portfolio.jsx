@@ -7,7 +7,7 @@ const portfolio = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="bg-[#555555]" id="portfolio">
+    <div className="bg-[#555555] pt-36" id="portfolio">
 
 
       <div className='p-20 grid gap-5 justify-center items-center '>
