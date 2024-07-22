@@ -5,7 +5,7 @@ const AddProject = () => {
     <div className="h-screen">
     <h1  className="flex justify-center font-bold text-3xl mb-8 mt-10">Add Project</h1>
     <div className="flex justify-center shadow-xl mt-5 w-[600px] m-64">
-  <form className="place-content-center m-8">
+  <form onSubmit={handleSubmit(onSubmit)} className="place-content-center m-8">
     <div className="grid grid-cols-2 gap-8">
       <div>
   
@@ -18,6 +18,7 @@ const AddProject = () => {
         <input
           type="text"
           id="projectName"
+          {...register("projectName", {required: "name is required"})}
           className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
         />
         <label

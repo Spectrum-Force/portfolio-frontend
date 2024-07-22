@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import React, {useState} from 'react'
+import { logoo } from '../assets';
 
 const Navbar = () => {
   const [isOpen, setIsOpen]= useState(false);
@@ -10,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="bg-[#555555] text-white p-4 flex items-center justify-between">
       <div className="flex items-center ml-10">
-        <img src="src/assets/images/logo-light (1).png" alt="Logo" className="" />
+        <img src={logoo} alt="Logo" className="" />
         <span className="font-bold"></span>
       </div>
       <div className='md:hidden'>

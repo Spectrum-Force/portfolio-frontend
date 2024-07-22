@@ -45,6 +45,11 @@ const K = {
             link: "/dashboard/socials"
         },
         {
+           
+            text: "Preview",
+            link: "/preview"
+        },
+        {
             icon: < LogOut/>,
             text: "Logout",
              link: "/signup"
@@ -56,7 +61,7 @@ const K = {
         {
             icon: <GraduationCapIcon />,
             text: "Education",
-            total: 5,
+            total: 3,
         },
         {
             icon: <EarthLockIcon />,
@@ -66,17 +71,17 @@ const K = {
         {
             icon: <BriefcaseBusinessIcon />,
             text: "Experience",
-            total: 30,
+            total: 5,
         },
         {
             icon: <BookTextIcon />,
             text: "Skills",
-            total: 30,
+            total: 4,
         },
         {
             icon: <AwardIcon />,
             text: "Achievements",
-            total: 30,
+            total: 5,
         },
 
     ],

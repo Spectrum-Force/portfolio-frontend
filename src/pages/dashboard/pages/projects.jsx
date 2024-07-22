@@ -3,8 +3,11 @@ import PagesLayout from "../layouts/pagesLayout";
 import K from "../../../constants";
 import { Edit, TrashIcon } from "lucide-react";
 
+
 const Projects = () => {
   const navigate = useNavigate();
+ 
+
   return (
     <PagesLayout
       headerText="Projects"
