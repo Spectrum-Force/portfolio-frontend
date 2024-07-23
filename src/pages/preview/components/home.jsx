@@ -10,12 +10,12 @@ const Home = () => {
             </div>
 
             <div className='text-[#FFFFFF] text-[40px] pt-8 md:text-6xl ' >
-                <h4>My Name is Felix Atoma, an <br />
+                <h4> I am Eunice Afrifa, an <br />
                     Accra Based <TypeAnimation
                         sequence={[
-                            // Same substring at the start will only be typed out once, initially
-                            'Photographer',
-                            1000, // wait 1s before replacing "Photograper" with "Programmer"
+                            
+                            'Frontend Developer',
+                            1000, 
                             'Programmer',
                             1000,
                             'Tech Enthusiast',

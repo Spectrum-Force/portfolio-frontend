@@ -10,14 +10,14 @@
     position: absolute;
     bottom: 30px;
     right: 20px;
-    max-width: 200px; 
+    max-width: 250px; 
     margin: 70px;
   }
 
   .bottom-right-image-two {
     position: absolute;
     bottom: -290px;
-    right: 20px;
-    max-width: 200px; 
+    right: 10px;
+    max-width: 250px; 
     margin: 70px;
   }

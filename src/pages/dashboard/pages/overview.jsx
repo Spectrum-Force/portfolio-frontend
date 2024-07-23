@@ -7,7 +7,7 @@ import { apiGetProjects } from "../../../services/projects";
 import { apiGetExperience } from "../../../services/experience";
 import { apiGetEducation } from "../../../services/education";
 import PageLoader from "../../../components/PageLoader";
-
+import { Link } from "lucide-react";
 
 const Overview = () => {
 
@@ -61,26 +61,27 @@ const Overview = () => {
     <>
       {
         isLoading ? (
-          <PageLoader/>
+          <PageLoader />
         ) : (
-            <div className="p-10 mt-10">
-    <div className="grid grid-cols-3 gap-10">
-      {K.OVERVIEW.map(({icon , text, total}, index) => (
-        <div
-        key={index}
-        className=" h-40 shadow-md rounded-xl p-5 bg-gradient-to-r from-blue-400 to-blue-600 text-white flex flex-col justify-between"
-        >
-          <div className="flex justify-between">
-            <span className="text-secondary">{icon}</span>
-            <span className="text-lg font-semibold">{text}</span>
-          </div>
-          <span className="text-2xl font-semibold">{total}</span>
-        </div>
-      )
+          <div className="p-10 mt-10">
+            <div className="grid grid-cols-3 gap-10">
+              {K.OVERVIEW.map(({ icon, text, total }, index) => (
+                <div
+                  key={index}
+                  className=" h-40 shadow-md rounded-xl p-5 bg-gradient-to-r from-blue-400 to-blue-600 text-white flex flex-col justify-between"
+                >
+                  <div className="flex justify-between">
+                    <span className="text-secondary">{icon}</span>
+                    <span className="text-lg font-semibold">{text}</span>
+                  </div>
+                  <span className="text-2xl font-semibold">{total}</span>
+                </div>
+              )
 
-      )}
-    </div>
-  </div>
+              )}
+            </div>
+          
+          </div>
         )
       }
     </>
