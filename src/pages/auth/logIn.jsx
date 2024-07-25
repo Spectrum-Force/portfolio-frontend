@@ -11,12 +11,20 @@ const LogIn = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm({ reValidateMode: "onBlur", mode: "all" });
   console.log(isSubmitting);
+
+  const addToLocalStorage = (accessToken, user) => {
+    localStorage.setItem("accessToken", accessToken);
+    localStorage.setItem("firstName", user.firstName);
+    localStorage.setItem("lastName", user.lastName);
+    localStorage.setItem("userName", user.userName);
+
+  }
+
+
   const onSubmit = async (data) => {
-
     console.log(data);
-
     setIsSubmitting(true)
     try {
       const res = await apiLogin({
@@ -24,13 +32,15 @@ const LogIn = () => {
         password: data.password,
       });
       console.log("Response", res.data);
-      
-      localStorage.setItem("accessToken", res.data.accessToken)
 
+
+      addToLocalStorage(res.data.accessToken, res.data.user)
       toast.success(res.data.message);
-      setTimeout(() => { // redirect user to the dashboard,
+      setTimeout(() => {
         navigate("/dashboard");
-      }, 5000)
+      }, 500);
+     
+
     } catch (error) {
       console.log(error);
       toast.error("An error occured");
@@ -108,14 +118,14 @@ const LogIn = () => {
               SIGN UP
             </Link>
           </div>
-          
+
         </div>
-         
+
         <div>
-        <img src={signing} alt="signing" className="bottom-right-image "/>
+          <img src={signing} alt="signing" className="bottom-right-image " />
+        </div>
       </div>
-      </div>
-      
+
     </div>
   )
 }

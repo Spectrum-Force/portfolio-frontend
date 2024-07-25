@@ -7,6 +7,8 @@ import {  b, smile, } from '../../../assets';
 const ProfilePage = () => {
   const navigate = useNavigate();
 
+
+  
   return (
     <div className="h-full bg-gray-100 flex flex-col items-center">
       <div className="w-full bg-white shadow-md">

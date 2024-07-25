@@ -12,8 +12,8 @@ export const apiGetSkillById = async (id) => {
     return apiClient.get(`/skills/${id}`)
 };
 
-export const apiUpdateSkill = async (id) => {
-    return apiClient.patch(`/skills/${id}`)
+export const apiUpdateSkill = async (id, payload) => {
+    return apiClient.patch(`/skills/${id}`, payload)
 };
 
 export const apiDeleteSkill = async (id) => {

@@ -19,7 +19,7 @@ const SignUp = () => {
     register,
     handleSubmit,
     watch,
-    formState: { errors } } = useForm();
+    formState: { errors } } = useForm({ reValidateMode: "onBlur", mode: "all" });
 
   const checkUserName = async (userName) => {
     console.log("I've been called");
@@ -37,7 +37,7 @@ const SignUp = () => {
       }
     } catch (error) {
       console.log(error)
-      toast.error("An error occured")
+      toast.error("An error occured!")
     }
     finally {
       setIsUsernameLoading(false);
@@ -53,7 +53,7 @@ const SignUp = () => {
         await checkUserName(userNameWatch)
       }
 
-    }, 5000)
+    }, 1000)
     debouncedSearch()
     return () => {
       debouncedSearch.cancel();
@@ -79,12 +79,10 @@ const SignUp = () => {
       const res = await apiSignUp(payload);
       console.log(res.data)
       toast.success(res.data)
-      setTimeout(() => {
-        navigate("/login");
-      }, 5000)
+      navigate("/login");
     } catch (error) {
       console.log(error)
-      toast.error("An error occured")
+      toast.error("An error occured!")
     } finally {
       setIsSubmitting(false)
     }
@@ -121,7 +119,13 @@ const SignUp = () => {
                 placeholder="Enter your first name"
                 className="bg-slate-300 h-10 w-full px-2 py-1 border-gray-400 border-[2px] rounded-md"
                 {
-                ...register("firstName", { required: "First name is not provided" })
+                ...register("firstName", {
+                  required: "First name is required",
+                  minLength: {
+                    value: 2,
+                    message: "length must be more than 2 characters",
+                  },
+                })
                 }
               />
               {errors.firstName && (<p className="text-red-500">{errors.firstName.message}</p>)}
@@ -137,7 +141,13 @@ const SignUp = () => {
                 placeholder="Enter your last name"
                 className="bg-slate-300 h-10 w-full px-2 py-1 border-gray-400 border-2 rounded-lg"
                 {
-                ...register("lastName", { required: "Last name is not provided" })
+                ...register("lastName", {
+                  required: "Last name is required",
+                  minLength: {
+                    value: 2,
+                    message: "length must be more than 2 characters",
+                  },
+                })
                 }
               />
               {errors.lastName && (<p className="text-red-500">{errors.lastName.message}</p>)}
@@ -168,7 +178,13 @@ const SignUp = () => {
                 placeholder="username"
                 className=" bg-slate-300 h-10 w-full px-2 py-1 border-gray-400 border-2 rounded-lg"
                 {
-                ...register("userName", { required: "not provided, minLength: 8" })
+                ...register("userName", {
+                  required: "User name is required",
+                  minLength: {
+                    value: 2,
+                    message: "length must be more than 2 characters",
+                  },
+                })
                 }
               />
               {errors.userName && (<p className="text-red-500">{errors.userName.message}</p>)}
@@ -194,7 +210,7 @@ const SignUp = () => {
                 className="bg-slate-300 h-10 w-full px-2 py-1 border-gray-400 border-2 rounded-lg"
 
                 {
-                ...register("email", { required: "Email is not provided" })
+                ...register("email", { required: "Email is required" })
                 }
               />
               {errors.email && (<p className="text-red-500">{errors.email.message}</p>)}
@@ -210,7 +226,13 @@ const SignUp = () => {
                 placeholder="Enter your password"
                 className="bg-slate-300 h-10 w-full px-2 py-1 border-gray-400 border-2 rounded-lg"
                 {
-                ...register("password", { required: "Password is not provided, minLength:8" })
+                ...register("password", {
+                  required: "Password is required",
+                  minLength: {
+                    value: 8,
+                    message: "Password length must be more than 8 characters",
+                  },
+                })
                 }
               />
               {errors.password && (<p className="text-red-500">{errors.password.message}</p>)}
@@ -237,10 +259,10 @@ const SignUp = () => {
         </div>
 
         <div>
-        <img src={signing} alt="signing" className="bottom-right-image-two" />
+          <img src={signing} alt="signing" className="bottom-right-image-two" />
+        </div>
       </div>
-      </div>
-     
+
     </div>
 
   )

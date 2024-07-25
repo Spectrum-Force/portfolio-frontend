@@ -22,12 +22,10 @@ const Preview = () => {
       <Portfolio/>
       <Experiences/>
       <Education/>
-      <Testimonials/>
-      
+      <Testimonials/> 
       <Contact/>
       <Reference/>
       <Footer/>
-    
       </div>
   )
 }

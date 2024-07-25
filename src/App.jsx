@@ -6,9 +6,7 @@ import './App.css'
 import LogIn from './pages/auth/logIn'
 import SignUp from './pages/auth/signUp'
 import Landing from './pages/landing'
-import Preview from './pages/preview'
 import DashboardLayout from './pages/dashboard/layouts'
-
 import Education from './pages/dashboard/pages/education'
 import Projects from './pages/dashboard/pages/projects'
 import Experience from './pages/dashboard/pages/experience'
@@ -23,24 +21,45 @@ import AddSkills from './pages/dashboard/pages/addSkills'
 import AddAchievement from './pages/dashboard/pages/addAchievement'
 import Overview from './pages/dashboard/pages/overview'
 import AddProfile from './pages/dashboard/pages/addProfile'
-
+import AuthLayout from './pages/auth/layouts/authLayout'
+import { apiGetUserDetails } from './services/preview'
+import { toast } from 'react-toastify'
+import Preview from './pages/preview'
 
 
 const router = createBrowserRouter([
-  { path: "/", element: <Landing /> },
+  {
+    path: "/",
+    element: <Landing />
+  },
+
+  {
+    element: <AuthLayout />,
+    children: [
+      {
+        path: "login",
+        element: <LogIn />,
+      },
+      {
+        path: "signup",
+        element: <SignUp />,
+      }
+    ]
+  },
+
   {
     path: "/dashboard", element: <DashboardLayout />,
     children: [
       {
-        index: true ,
-        element: <Overview/>
+        index: true,
+        element: <Overview />
       },
       {
-        path:"profile" ,
+        path: "profile",
         element: <Profile />
       },
       {
-        path: "profile/add" ,
+        path: "profile/add",
         element: <AddProfile />
       },
       {
@@ -83,17 +102,35 @@ const router = createBrowserRouter([
         path: "achievements/add",
         element: <AddAchievement />
       },
-      
-    
+
+
       {
         path: "socials",
         element: <Socials />
       },
+      
     ]
   },
-  { path: "/signup", element: <SignUp /> },
-  { path: "/login", element: <LogIn /> },
-  { path: "/preview", element: <Preview /> },
+  // { path: "/signup", element: <SignUp /> },
+  // { path: "/login", element: <LogIn /> },
+
+
+
+  {
+    path: "/preview/:username",
+    element: <Preview/>,
+    loader: async ({ params }) => {
+      const username = params.username;
+      try {
+        const response = await apiGetUserDetails(username);
+        const userProfileData = response?.data.user;
+        return userProfileData;
+      } catch (error) {
+        toast.error("An error occurred")
+        return null;
+      }
+    }
+  },
 
 
 ])

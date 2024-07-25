@@ -1,11 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useForm } from 'react-hook-form';
+import { apiAddAchievement } from '../../../services/achievements';
+import { toast } from 'react-toastify';
+import Loader from '../../../components/loader';
 
 const AddAchievement = () => {
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors } } = useForm();
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const onSubmit = async (data) => {
+    console.log(data);
+    setIsSubmitting(true)
+    try {
+      const res = await apiAddAchievement({
+
+        award: data.name,
+        description: data.description,
+        date: data.date,
+        nameOfInstitution: data.nameOfInstitution,
+        image: data.image,
+      });
+
+      console.log(res.data);
+      toast.success(res.data.message)
+    } catch (error) {
+      console.log(error)
+      toast.error("An error occured")
+    } finally {
+      setIsSubmitting(false)
+    }
+  };
+
   return (
     <div className="h-screen">
       <h1 className="flex justify-center font-bold text-3xl mb-8">Add Achievement</h1>
       <div className="flex justify-center shadow-xl mt-5 w-[600px] m-64">
-        <form className="place-content-center m-8 text-black">
+        <form onSubmit={handleSubmit(onSubmit)} className="place-content-center m-8 text-black">
           <div className="grid gap-8 ">
 
             <div>
@@ -19,6 +53,7 @@ const AddAchievement = () => {
                 type="text"
                 id="award"
                 name="award"
+                {...register("award", { required: "award is required" })}
                 placeholder="Enter the award name"
                 className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg mb-4"
               />
@@ -33,11 +68,11 @@ const AddAchievement = () => {
                 id="description"
                 className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg mb-4"
               />
-               <label
+              <label
                 htmlFor="nameOfInstitution"
                 className="block  mb-1 ml-4"
               >
-               Institution
+                Institution
               </label>
               <input
                 type="text"
@@ -68,7 +103,7 @@ const AddAchievement = () => {
                 className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg mb-4"
               />
             </div>
-            
+
           </div>
 
           <div className="flex justify-center mt-5">
@@ -76,7 +111,7 @@ const AddAchievement = () => {
               type="submit"
               className="h-10 w-40 px-3 py-2 bg-primary border-2 rounded-3xl hover:bg-[#e7d7e9] font-bold"
             >
-             Submit
+              {isSubmitting ? <Loader /> : "Add Achievement"}
             </button>
           </div>
         </form>
