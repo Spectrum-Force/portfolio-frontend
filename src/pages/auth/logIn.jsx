@@ -88,7 +88,7 @@ const LogIn = () => {
               />
               {errors.password && (<p className="text-red-500">{errors.password.message}</p>)}
               <div className=" flex pl-10">
-                <div className="text-center text-white my-8 pb-8 h-10 w-40 px-3 py-2 bg-[#337eff] border-2 rounded-3xl hover:bg-black">
+                <div className="text-center text-white my-8 pb-8 h-10 w-40 px-3 py-2 bg-[#337eff] border-2 rounded-3xl hover:bg-gray-400">
                   <button type="submit">
                     {isSubmitting ? <Loader /> : "Sign in"}
                   </button>
