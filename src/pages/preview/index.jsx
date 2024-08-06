@@ -11,23 +11,28 @@ import Education from './components/education'
 import Footer from './components/footer'
 import Reference from './components/reference'
 import PaginationComponent from './components/PaginationComponent'
+import { useLoaderData } from 'react-router-dom'
+import SkillsPreview from './components/skillsPreview'
 
 const Preview = () => {
+
+const data = useLoaderData();
+console.log(data)
+
   return (
     <div className='bg-[#555555]'>
       <Navbar />
-      <Home/>
-       <About/>
+      <Home name={`${data.firstName} ${data.otherNames} ${data.lastName}`}/>
+       <About content={data.userProfile[0].about}/>
+       <SkillsPreview ability={data.skills}/>
       <PaginationComponent/>
-      <Portfolio/>
-      <Experiences/>
-      <Education/>
-      <Testimonials/>
-      
+      <Portfolio projects={data.projects}/>
+      <Experiences insight={data.experiences}/>
+      <Education edu={data.education}/>
+      <Testimonials/> 
       <Contact/>
       <Reference/>
       <Footer/>
-    
       </div>
   )
 }

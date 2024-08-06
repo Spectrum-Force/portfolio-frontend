@@ -49,39 +49,40 @@ const K = {
             text: "Preview",
             link: "/preview"
         },
-        {
-            icon: < LogOut/>,
-            text: "Logout",
-             link: "/signup"
-        },
+    
 
     ],
 
     OVERVIEW: [
         {
+            id: "education",
             icon: <GraduationCapIcon />,
             text: "Education",
-            total: 3,
+            
         },
         {
+            id: "projects",
             icon: <EarthLockIcon />,
             text: "Projects",
-            total: 10,
+            
         },
         {
+            id: "experience",
             icon: <BriefcaseBusinessIcon />,
             text: "Experience",
-            total: 5,
+            
         },
         {
+            id: "skills",
             icon: <BookTextIcon />,
             text: "Skills",
-            total: 4,
+            
         },
         {
+            id: "achievements",
             icon: <AwardIcon />,
             text: "Achievements",
-            total: 5,
+            
         },
 
     ],
