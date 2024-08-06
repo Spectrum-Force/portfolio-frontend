@@ -17,7 +17,7 @@ const AddExperience = () => {
      setIsSubmitting(true)
       try {
         const res = await apiAddExperience({
-          companyName: data.name,
+          companyName: data.companyName,
           role: data.role,
           responsibility: data.responsibility,
           location: data.location,
@@ -65,6 +65,7 @@ const AddExperience = () => {
             type="text"
             id="role"
             className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg "
+            {...register ("role")}
           />
           <label
             htmlFor="responsibility"
@@ -76,6 +77,7 @@ const AddExperience = () => {
             type="text"
             id="responsibility"
             className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg "
+            {...register ("responsibility")}
           />
           <label
             htmlFor="location"
@@ -87,6 +89,7 @@ const AddExperience = () => {
             type="text"
             id="location"
             className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg"
+            {...register ("location")}
           />
           <label
             htmlFor="startDate"
@@ -95,9 +98,10 @@ const AddExperience = () => {
             Start Date
           </label>
           <input
-            type="text"
+            type="date"
             id="startDate"
             className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg"
+            {...register ("startDate")}
           />
           <label
             htmlFor="endDate"
@@ -106,9 +110,10 @@ const AddExperience = () => {
            End Date
           </label>
           <input
-            type="text"
+            type="date"
             id="endDate"
             className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg "
+            {...register ("endDate")}
           />
           
         </div>

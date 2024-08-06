@@ -1,12 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Pencil } from 'lucide-react';
 import {  b, smile, } from '../../../assets';
+import { apiGetProfile } from '../../../services/profile';
 
 
 const ProfilePage = () => {
   const navigate = useNavigate();
+  const [projects, setProfile] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+ 
 
+  const fetchProfile = async () => {
+    setIsLoading(true)
+    try {
+      const res = await apiGetProfile()
+      console.log(res.data)
+      setProfile(res.data.Projects)
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setIsLoading(false)
+    }
+  };
+
+ 
+
+  useEffect(() => {
+    fetchProfile()
+  }, [])
+ 
 
   
   return (

@@ -10,7 +10,7 @@ const services = () => {
       </div>
 
 
-      <div className=" flex-row  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      {/* <div className=" flex-row  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
         <div className="flex flex-col items-center h-80 w-72 bg-[#555555] border border-[#999999]
           rounded-lg transition duration-300 ease-in-out transform
@@ -73,7 +73,7 @@ const services = () => {
         </div>
 
 
-      </div>
+      </div> */}
 
 
     </div>

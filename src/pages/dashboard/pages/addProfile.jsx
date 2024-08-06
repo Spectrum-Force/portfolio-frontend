@@ -1,11 +1,52 @@
+import { useForm } from "react-hook-form";
+import { apiAddProfile } from "../../../services/profile";
+import { useState } from "react";
+import Loader from "../../../components/loader";
+import { toast } from "react-toastify";
 
 
 const AddProfile = () => {
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors } } = useForm();
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const onSubmit = async (data) => {
+    console.log(data);
+    setIsSubmitting(true)
+    try {
+
+      const formData = new FormData();
+
+      formData.append("profilePicture", data.profilePicture[0]);
+      formData.append("location", data.location);
+      formData.append("maritalStatus", data.maritalStatus);
+      formData.append("sex", data.sex);
+      formData.append("bio", data.bio);
+      formData.append("about", data.about);
+      formData.append("dateOfBirth", data.dateOfBirth);
+      formData.append("contact", data.contact);
+      formData.append("resume", data.resume[0]);
+      
+      const res = await apiAddProfile(formData);
+
+      console.log(res.data);
+      toast.success(res.data.message)
+    } catch (error) {
+      console.log(error)
+      toast.error("An error occured")
+    } finally {
+      setIsSubmitting(false)
+    }
+  };
+  
   return (
     <div className="h-screen">
       <h1  className="flex justify-center font-bold text-3xl mb-8 mt-10">Add Profile</h1>
       <div className="flex justify-center shadow-xl mt-5 w-[600px] m-64">
-    <form className="place-content-center m-8">
+    <form onSubmit = {handleSubmit(onSubmit)} className="place-content-center m-8">
       <div className="grid grid-cols-2 gap-8">
         <div>
     
@@ -20,6 +61,7 @@ const AddProfile = () => {
             id="profilePicture"
             accept="image/*"
             className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            {...register ("profilePicture")}
           />
           <label
             htmlFor="location"
@@ -31,6 +73,7 @@ const AddProfile = () => {
             type="text"
             id="location"
             className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            {...register ("location")}
           />
           <label
             htmlFor="maritalStatus"
@@ -42,6 +85,7 @@ const AddProfile = () => {
             id="maritalStatus"
             name="maritalStatus"
             className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            {...register ("maritalStatus")}
           >
             <option value="single">Single</option>
             <option value="married">Married</option>
@@ -57,6 +101,7 @@ const AddProfile = () => {
             id="sex"
             name="sex"
             className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            {...register ("sex")}
           >
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -74,6 +119,7 @@ const AddProfile = () => {
             type="text"
             id="bio"
             className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            {...register ("bio")}
           />
           <label
             htmlFor="about"
@@ -85,6 +131,7 @@ const AddProfile = () => {
             type="text"
             id="about"
             className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            {...register ("about")}
           />
           <label
             htmlFor="dateOfBirth"
@@ -96,6 +143,7 @@ const AddProfile = () => {
             type="date"
             id="dateOfBirth"
             className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            {...register ("dateOfBirth")}
           />
           <label
             htmlFor="contact"
@@ -107,6 +155,7 @@ const AddProfile = () => {
             type="text"
             id="contact"
             className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
+            {...register ("conact")}
           />
           <label
             htmlFor="resume"
@@ -120,16 +169,17 @@ const AddProfile = () => {
             name="resume"
             className="h-10 w-full px-2 py-1 border-black border-2 rounded-lg mb-4"
             accept=".pdf,.doc,.docx"
+            {...register ("resume")}
           />
         </div>
       </div>
       <div className="flex justify-center mt-5">
-        <button
-          type="submit"
-          className="h-10 w-40 px-3 py-2 bg-primary border-2 rounded-3xl hover:bg-[#e7d7e9] font-bold"
-        >
-         Submit
-        </button>
+      <button
+              type="submit"
+              className="h-10 w-40 px-3 py-2 bg-primary border-2 rounded-3xl hover:bg-[#e7d7e9] font-bold"
+            >
+              {isSubmitting ? <Loader/> : "Add Profile"}
+            </button>
       </div>
     </form>
   </div>

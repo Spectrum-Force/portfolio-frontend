@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const portfolio = () => {
+const portfolio = ({projects}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -31,7 +31,9 @@ const portfolio = () => {
         </div>
       </div>
       <div className="grid grid-cols-3 gap-4 px-[100px]">
-        <div className="group relative">
+        {
+          projects.map((project, index) => (
+            <div className="group relative">
           <img
             src="src/assets/images/pf (1).jpg"
             alt="Project name"
@@ -46,81 +48,9 @@ const portfolio = () => {
             </div>
           </div>
         </div>
-        <div className="group relative">
-          <img
-            src="src/assets/images/pf (2).jpg"
-            alt="Project name"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gray-800 opacity-0 hover:opacity-75 group-hover:opacity-100 transition duration-300">
-            <div className='text-white text-center justify-center items-center'>
-              <p className="">Project name</p>
-              <a href="" className=''>
-                link
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="group relative">
-          <img
-            src="src/assets/images/pf (3).jpg"
-            alt="Project name"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gray-800 opacity-0 hover:opacity-75 group-hover:opacity-100 transition duration-300">
-            <div className='text-white text-center justify-center items-center'>
-              <p className="">Project name</p>
-              <a href="" className=''>
-                link
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="group relative">
-          <img
-            src="src/assets/images/pf (4).jpg"
-            alt="Project name"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gray-800 opacity-0 hover:opacity-75 group-hover:opacity-100 transition duration-300">
-            <div className='text-white text-center justify-center items-center'>
-              <p className="">Project name</p>
-              <a href="" className=''>
-                link
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="group relative">
-          <img
-            src="src/assets/images/pf (5).jpg"
-            alt="Project name"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gray-800 opacity-0 hover:opacity-75 group-hover:opacity-100 transition duration-300">
-            <div className='text-white text-center justify-center items-center'>
-              <p className="">Project name</p>
-              <a href="" className=''>
-                link
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="group relative">
-          <img
-            src="src/assets/images/pf (6).jpg"
-            alt="Project name"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gray-800 opacity-0 hover:opacity-75 group-hover:opacity-100 transition duration-300">
-            <div className='text-white text-center flex place-items-center '>
-              <p className="">Project name</p>
-              <a href="" className=''>
-                link
-              </a>
-            </div>
-          </div>
-        </div>
+          ))
+        }
+       
 
       </div>
 

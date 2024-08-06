@@ -1,7 +1,7 @@
 import { apiClient } from "./config"
 
 export const apiAddProject = async (payload) => {
-    return apiClient.post("/projects")
+    return apiClient.post("/projects", payload)
 };
 
 export const apiGetProjects = async () => {

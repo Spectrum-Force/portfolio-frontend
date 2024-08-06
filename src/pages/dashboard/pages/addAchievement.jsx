@@ -1,52 +1,54 @@
-import React, { useState } from 'react'
-import { useForm } from 'react-hook-form';
-import { apiAddAchievement } from '../../../services/achievements';
-import { toast } from 'react-toastify';
-import Loader from '../../../components/loader';
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { apiAddAchievement } from "../../../services/achievements";
+import { toast } from "react-toastify";
+import Loader from "../../../components/loader";
 
 const AddAchievement = () => {
-
   const {
     register,
     handleSubmit,
-    formState: { errors } } = useForm();
-  const [isSubmitting, setIsSubmitting] = useState(false)
+    formState: { errors },
+  } = useForm();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onSubmit = async (data) => {
     console.log(data);
-    setIsSubmitting(true)
+    setIsSubmitting(true);
     try {
-      const res = await apiAddAchievement({
+      const formData = new FormData();
 
-        award: data.name,
-        description: data.description,
-        date: data.date,
-        nameOfInstitution: data.nameOfInstitution,
-        image: data.image,
-      });
+      formData.append("award", data.award);
+      formData.append("description", data.description);
+      formData.append("date", data.date);
+      formData.append("nameOfInstitution", data.nameOfInstitution);
+      formData.append("image", data.image[0]);
+
+      const res = await apiAddAchievement(formData);
 
       console.log(res.data);
-      toast.success(res.data.message)
+      toast.success(res.data.message);
     } catch (error) {
-      console.log(error)
-      toast.error("An error occured")
+      console.log(error);
+      toast.error("An error occured");
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   };
 
   return (
     <div className="h-screen">
-      <h1 className="flex justify-center font-bold text-3xl mb-8">Add Achievement</h1>
+      <h1 className="flex justify-center font-bold text-3xl mb-8">
+        Add Achievement
+      </h1>
       <div className="flex justify-center shadow-xl mt-5 w-[600px] m-64">
-        <form onSubmit={handleSubmit(onSubmit)} className="place-content-center m-8 text-black">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="place-content-center m-8 text-black"
+        >
           <div className="grid gap-8 ">
-
             <div>
-              <label
-                htmlFor="award"
-                className="block   mb-1 ml-4"
-              >
+              <label htmlFor="award" className="block   mb-1 ml-4">
                 Award
               </label>
               <input
@@ -57,53 +59,42 @@ const AddAchievement = () => {
                 placeholder="Enter the award name"
                 className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg mb-4"
               />
-              <label
-                htmlFor="description"
-                className="block   mb-1 ml-4"
-              >
+              <label htmlFor="description" className="block   mb-1 ml-4">
                 Description
               </label>
               <input
                 type="text"
                 id="description"
                 className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg mb-4"
+                {...register("description")}
               />
-              <label
-                htmlFor="nameOfInstitution"
-                className="block  mb-1 ml-4"
-              >
-                Institution
-              </label>
+              <label className="block  mb-1 ml-4">Institution</label>
               <input
                 type="text"
                 id="nameOfInstitution"
                 placeholder="Name of Institution"
                 className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg mb-4"
+                {...register("nameOfInstitution")}
               />
-              <label
-                htmlFor="imageUpload"
-                className="block   mb-1 ml-4"
-              >
+              <label htmlFor="" className="block   mb-1 ml-4">
                 Upload an Image
               </label>
               <input
                 type="file"
-                id="imageUpload"
+                id="image"
                 className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg mb-4"
+                {...register("image")}
               />
-              <label
-                htmlFor="date"
-                className="block   mb-1 ml-4"
-              >
+              <label htmlFor="date" className="block   mb-1 ml-4">
                 Date
               </label>
               <input
                 type="date"
                 id="date"
                 className="h-10 w-64 px-2 py-1 border-black border-2 rounded-lg mb-4"
+                {...register("date")}
               />
             </div>
-
           </div>
 
           <div className="flex justify-center mt-5">
@@ -117,8 +108,7 @@ const AddAchievement = () => {
         </form>
       </div>
     </div>
+  );
+};
 
-  )
-}
-
-export default AddAchievement
+export default AddAchievement;
