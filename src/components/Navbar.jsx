@@ -48,11 +48,11 @@ const Navbar = () => {
             About
           </a>
         </li>    
-        <li >  
+        {/* <li >  
           <a href="#services" className='hover:text-[#337eff] hover:underline'>
             Services
           </a>
-        </li>    
+        </li>     */}
         <li >  
           <a href="#portfolio" className='hover:text-[#337eff]hover:underline'>
             Portfolio

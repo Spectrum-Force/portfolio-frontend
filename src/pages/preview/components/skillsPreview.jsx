@@ -17,26 +17,26 @@ const SkillsPreview = ({ ability }) => {
       <div className="text-[40px] text-[#FFFFFF] flex justify-center items-center">
         <h1>Skills</h1>
       </div>
-      {ability.map((ability) => (
-        <div>
-          <div className="flex justify-between items-center space-x-6 ">
-            <div className="w-[33%]">
-              <h2 className="text-[18px] text-[#FFFFFF]">{ability.name}</h2>
-              <div className="flex items-center mt-2 relative w-full">
-                <div className="h-1 bg-[#0101011A] w-full rounded-md "></div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        {ability.map((skill) => (
+          <div key={skill.name} className="p-4 ">
+            <h2 className="text-[18px] text-[#FFFFFF] mb-2">{skill.name}</h2>
+            <div className="flex items-center w-full">
+              <div className="w-full h-2 bg-[#0101011A] rounded-md">
                 <div
-                  className="h-1 bg-[#337eff] absolute"
+                  className="h-2 bg-[#337eff] rounded-md"
                   style={{
-                    width: `${getProficiencyPercentage(
-                      ability.levelOfProficiency
-                    )}%`,
+                    width: `${getProficiencyPercentage(skill.levelOfProficiency)}%`,
                   }}
                 ></div>
               </div>
             </div>
+            <p className="text-[#FFFFFF] mt-2">
+              {getProficiencyPercentage(skill.levelOfProficiency)}%
+            </p>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 };
