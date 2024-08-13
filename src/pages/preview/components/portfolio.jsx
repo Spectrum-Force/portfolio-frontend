@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const portfolio = ({projects}) => {
+const portfolio = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -31,8 +31,7 @@ const portfolio = ({projects}) => {
         </div>
       </div>
       <div className="grid grid-cols-3 gap-4 px-[100px]">
-        {
-          projects.map((project, index) => (
+        
             <div className="group relative">
           <img
             src="src/assets/images/pf (1).jpg"
@@ -48,8 +47,8 @@ const portfolio = ({projects}) => {
             </div>
           </div>
         </div>
-          ))
-        }
+          
+        
        
 
       </div>

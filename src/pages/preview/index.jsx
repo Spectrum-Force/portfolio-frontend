@@ -6,13 +6,15 @@ import About from './components/about'
 import Experiences from './components/experiences'
 import Contact from './components/contact'
 import Home from './components/home'
-import Testimonials from './components/testimonials'
+// import Testimonials from './components/testimonials'
 import Education from './components/education'
 import Footer from './components/footer'
 import Reference from './components/reference'
 import PaginationComponent from './components/PaginationComponent'
 import { useLoaderData } from 'react-router-dom'
 import SkillsPreview from './components/skillsPreview'
+import Projects from './components/projects'
+import Achievements from './components/achievements'
 
 const Preview = () => {
 
@@ -25,11 +27,13 @@ console.log(data)
       <Home name={`${data.firstName} ${data.otherNames} ${data.lastName}`}/>
        <About content={data.userProfile[0].about}/>
        <SkillsPreview ability={data.skills}/>
-      <PaginationComponent/>
-      <Portfolio projects={data.projects}/>
+       <Projects task={data.projects}/>
+       <Achievements achieve={data.achievements}/>
+     
+      
       <Experiences insight={data.experiences}/>
       <Education edu={data.education}/>
-      <Testimonials/> 
+      {/* <Testimonials/>  */}
       <Contact/>
       <Reference/>
       <Footer/>

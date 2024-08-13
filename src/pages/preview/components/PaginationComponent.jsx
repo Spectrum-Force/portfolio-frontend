@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 // Mock data for the cards
 const cardsData = [
-  { id: 1, imageSrc: '/path/to/src/assets/images/camera.png', text: 'Branding' },
+  { id: 1, imageSrc: 'https://savefiles.org/secure/uploads/15160', text: 'Branding' },
   { id: 2, imageSrc: '/path/to/development-image.jpg', text: 'Development' },
   { id: 3, imageSrc: '/path/to/seo-image.png', text: 'SEO' },
   { id: 4, imageSrc: '/path/to/design-image.jpg', text: 'Design' },
@@ -11,10 +11,12 @@ const cardsData = [
 ];
 
 // Card component
-const Card = ({ imageSrc, text }) => (
+const Card = ({ projectName,description,contributors,skills,nameOfInstitution,startDate,endDate,imageSrc, text }) => (
   <div className="border p-4 rounded shadow-md flex flex-col items-center h-60 w-80 pt-5 hover:bg-blue-500 hover:text-white transition-colors">
-    <img src={imageSrc} alt={text} className="h-24 mb-2" />
-    <p className="text-lg font-bold">{text}</p>
+    <img src={imageSrc} alt="picture" className="h-24 mb-2" />
+    <p className="text-lg font-bold">{projectName}</p>
+    <p className="text-lg font-bold">{description}</p>
+    <p className="text-lg font-bold">{contributors}</p>
   </div>
 );
 
@@ -49,8 +51,10 @@ const PaginationComponent = () => {
         </h1>
       </div>
       <div className="flex justify-between mb-4 pt-4">
-        {currentItems.map((card) => (
-          <Card key={card.id} imageSrc={card.imageSrc} text={card.text} />
+        {currentItems.map((PaginationComponent) => (
+          <Card key={PaginationComponent.id} 
+          imageSrc={PaginationComponent.imageSrc} 
+          projectName={PaginationComponent.projectName} />
         ))}
       </div>
       <div className="flex justify-center">

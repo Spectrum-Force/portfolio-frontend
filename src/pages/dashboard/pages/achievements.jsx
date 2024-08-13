@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import { apiDeleteAchievement, apiGetAchievements } from "../../../services/achievements"
 import { toast } from "react-toastify"
 import PageLoader from "../../../components/PageLoader"
+import { Edit, TrashIcon } from "lucide-react"
 
 
 const Achievements = () => {
@@ -45,52 +46,56 @@ const Achievements = () => {
 
 
   return (
-    <PagesLayout 
-    headerText="Achievements" 
-    buttonText="Add New Achievement" 
+    <PagesLayout
+    headerText="Achievements"
+    buttonText="Add New Achievement"
     onClick={() => navigate("/dashboard/achievements/add")}
-    >
-      {
-        isLoading ? <PageLoader/> :
-        <div>
-          {
-          achievement.length == 0 ? <p>No achievement added</p> :
-          <div className="flex flex-row gap-x-5">
-          <AchievementCard
-          image = {education}
-          award = "IT GG"
-          nameOfInstitution="MEST"
-          description="gdrr juiygyf ytftdr"
-          date="20th June 2000"
-          />
-          <AchievementCard 
-           image = {lady}
-           award = "IT GG"
-           nameOfInstitution="MEST"
-           description="gdrr juiygyf ytftdr"
-           date="20th June 2000"
-          />
-          <AchievementCard 
-           image = {lady}
-           award = "IT GG"
-           nameOfInstitution="MEST"
-           description="gdrr juiygyf ytftdr"
-           date="20th June 2000"
-          />
-          <AchievementCard 
-           image = {lady}
-           award = "IT GG"
-           nameOfInstitution="MEST"
-           description="gdrr juiygyf ytftdr"
-           date="20th June 2000"
-          />
+  >
+    {isLoading ? (
+      <PageLoader />
+    ) : (
+      <div>
+        {achievement.length === 0 ? (
+          <p>No achievement added</p>
+        ) : (
+          <div className="flex flex-wrap gap-5 mt-5">
+            {achievement.map(({ image, award, nameOfInstitution, description, date, id }) => (
+              <div
+                key={id}
+                className="shadow-md rounded-xl p-5 bg-gradient-to-r from-blue-400 to-blue-600 text-white flex flex-col justify-between"
+              >
+                <div className="flex justify-between items-center">
+                  <span className="uppercase font-bold">{award}</span>
+                  <div className="flex gap-2">
+                    <button
+                      className="bg-primary p-2 rounded-full text-white"
+                    >
+                      <Edit size={16} />
+                    </button>
+                    <button
+                      onClick={() => handleDelete(id)}
+                      className="bg-primary p-2 rounded-full text-white"
+                    >
+                      {isDeleting ? <Loader /> : <TrashIcon />}
+                    </button>
+                  </div>
+                </div>
+                <div className="mt-2">
+                  <span className="block">{image}</span>
+                  <span className="block">{description}</span>
+                  <span className="block">{nameOfInstitution}</span>
+                  <div className="text-gray-700 mt-1">
+                    <span>{date}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          }
-        </div>
-      }
-        
-      
-    </PagesLayout>
+        )}
+      </div>
+    )}
+  </PagesLayout>
+
   )
 }
 

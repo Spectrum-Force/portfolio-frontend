@@ -59,10 +59,13 @@ const Projects = () => {
               {projects.map(
                 (
                   {
-                    name,
+                    projectName,
                     description,
                     contributors,
-                    institution,
+                    skills,
+                    image,
+                    link,
+                    nameOfInstitution,
                     startDate,
                     endDate,
                     id,
@@ -74,7 +77,7 @@ const Projects = () => {
                     className="shadow-md rounded-xl p-5 bg-gradient-to-r from-blue-400 to-blue-600 text-white flex flex-col justify-between"
                   >
                     <div className="flex justify-between items-center">
-                      <span className="uppercase font-bold">{name}</span>
+                      <span className="uppercase font-bold">{projectName}</span>
                       <div className="flex gap-2">
                         <button className="bg-primary p-2 rounded-full text-white">
                           <Edit size={16} />
@@ -88,9 +91,12 @@ const Projects = () => {
                       </div>
                     </div>
                     <div className="mt-2">
+                      <span className="block ">{image}</span>
+                      <span className="block ">{link}</span>
                       <span className="block ]">{description}</span>
                       <span className="block ">{contributors}</span>
-                      <span className="block">{institution}</span>
+                      <span className="block ">{skills}</span>
+                      <span className="block">{nameOfInstitution}</span>
                       <div className="flex justify-between text-gray-700 mt-1">
                         <span>{startDate}</span>
                         <span>{endDate}</span>
