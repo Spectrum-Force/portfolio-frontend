@@ -1,123 +1,94 @@
-import { Link, useNavigate } from "react-router-dom"
-import { useForm } from "react-hook-form"
+import { Link, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import { apiLogin } from "../../services/auth";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import Loader from "../../components/loader";
-import signing from "../../assets/images/signing.png"
+import signing from "../../assets/images/signing.png";
 
 const LogIn = () => {
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  console.log(isSubmitting);
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
   const onSubmit = async (data) => {
-
-    console.log(data);
-
-    setIsSubmitting(true)
+    setIsSubmitting(true);
     try {
       const res = await apiLogin({
         email: data.email,
         password: data.password,
       });
-      console.log("Response", res.data);
-      
-      localStorage.setItem("accessToken", res.data.accessToken)
 
+      localStorage.setItem("accessToken", res.data.accessToken);
       toast.success(res.data.message);
-      setTimeout(() => { // redirect user to the dashboard,
+
+      setTimeout(() => {
         navigate("/dashboard");
-      }, 5000)
+      }, 5000);
     } catch (error) {
-      console.log(error);
-      toast.error("An error occured");
-
+      toast.error("An error occurred");
+    } finally {
+      setIsSubmitting(false);
     }
+  };
 
-    finally {
-      setIsSubmitting(false)
-
-    }
-  }
   return (
-
-    <div className="bg-signUpBg flex items-center justify-center" >
-      <div className="flex flex-row shadow-lg m-32 ">
-        <div>
-          <form onSubmit={handleSubmit(onSubmit)} className=" flex place-content-center text-xl font-serif">
-            <div className="mx-28">
-              <div className="m-9">
-                <h1>SIGN IN</h1>
-                <p>Use your account</p>
-              </div>
-
-              <label
-                htmlFor="email"
-                className="block text-black mb-1 ml-4"
-              >
+    <div className="flex min-h-screen bg-gray-100">
+      <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl mx-auto my-8 bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="flex-1 p-6 md:w-1/2">
+          <h1 className="text-2xl font-bold mb-4">Sign In</h1>
+          <p className="mb-4">Use your account to log in.</p>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            <div>
+              <label htmlFor="email" className="block text-gray-700 font-semibold mb-1">
                 Email/Username
               </label>
               <input
                 type="text"
                 id="email"
-                placeholder="email/username"
-                className="bg-slate-300 h-10 w-full px-2 py-1 border-gray-400 border-2 rounded-lg "
-                {
-                ...register("email", { required: "email is not provided" })
-                }
+                placeholder="Email/Username"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                {...register("email", { required: "Email is required" })}
               />
-              {errors.email && (<p className="text-red-500">{errors.email.message}</p>)}
-
-              <label
-                htmlFor="password"
-                className="block text-black mb-1 ml-4"
-              >
+              {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+            </div>
+            <div>
+              <label htmlFor="password" className="block text-gray-700 font-semibold mb-1">
                 Password
               </label>
               <input
                 type="password"
                 id="password"
-                placeholder="password"
-                className=" bg-slate-300 h-10 w-full px-2 py-1 border-gray-400 border-2 rounded-lg"
-                {
-                ...register("password", { required: "provide password" })
-                }
+                placeholder="Password"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                {...register("password", { required: "Password is required" })}
               />
-              {errors.password && (<p className="text-red-500">{errors.password.message}</p>)}
-              <div className=" flex pl-10">
-                <div className="text-center text-white my-8 pb-8 h-10 w-40 px-3 py-2 bg-[#337eff] border-2 rounded-3xl hover:bg-black">
-                  <button type="submit">
-                    {isSubmitting ? <Loader /> : "Sign in"}
-                  </button>
-                </div>
-              </div>
-
+              {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
             </div>
+            <button
+              type="submit"
+              className="w-full py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? <Loader /> : "Sign In"}
+            </button>
+            <p className="text-center text-gray-600 mt-4">
+              Don't have an account? <Link to="/signup" className="text-blue-500 font-semibold">Sign Up</Link>.
+            </p>
           </form>
-
         </div>
-
-        <div className="bg-[#337eff] place-content-center">
-          <div className="text-center text-white font-mono text-lg m-20">
-            <h1> Hello, Friend!</h1>
-            <p>Enter your personal details <br />to start your journey with us</p>
-            <Link to="/signup" className="underline">
-              SIGN UP
-            </Link>
+        <div className="hidden md:flex flex-1 bg-blue-500 items-center justify-center p-6">
+          <div className="text-center text-white">
+            <h2 className="text-2xl font-bold mb-4">Hello, Friend!</h2>
+            <p className="mb-4">Enter your personal details to start your journey with us.</p>
+            <Link to="/signup" className="text-blue-200 underline">Sign Up</Link>
           </div>
-          
+          <img src={signing} alt="Signing" className="absolute bottom-0 right-0 w-1/2 h-auto object-cover" />
         </div>
-         
-        <div>
-        <img src={signing} alt="signing" className="bottom-right-image "/>
       </div>
-      </div>
-      
     </div>
-  )
-}
+  );
+};
 
-export default LogIn
+export default LogIn;
